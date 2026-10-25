@@ -1,0 +1,35 @@
+info:
+  name: Update settings
+  type: http
+  seq: 2
+http:
+  method: PATCH
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/settings'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "anonymous": true,
+        "timezone": "Europe/Madrid",
+        "language": "es",
+        "survey_hour": 10,
+        "report_frequency": "weekly",
+        "report_dm": true,
+        "games_enabled": true,
+        "working_days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "survey_message": ""
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Needs `manage`. Every field optional. `survey_message: ""` goes back to the default text.'

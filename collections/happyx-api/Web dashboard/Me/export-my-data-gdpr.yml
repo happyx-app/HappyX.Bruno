@@ -1,0 +1,11 @@
+info:
+  name: Export my data (GDPR)
+  type: http
+  seq: 3
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/me/data'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true

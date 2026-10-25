@@ -1,0 +1,27 @@
+info:
+  name: Sync members (bulk)
+  type: http
+  seq: 2
+http:
+  method: PUT
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/members'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "members": [
+          {
+            "discord_user_id": "{{userId}}",
+            "username": "someone",
+            "role_ids": []
+          }
+        ]
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Registers up to 1000 members or refreshes usernames and roles, keeping opt-in state. 204.

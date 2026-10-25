@@ -1,0 +1,53 @@
+name: Production
+color: '#ef4444'
+variables:
+- name: apiUrl
+  value: http://NAS-IP:8083
+  enabled: true
+  secret: false
+  description: API base URL for /v1 and /health (the API's own port, not the web domain)
+- name: webApiUrl
+  value: https://happyx.joanbe.net/api
+  enabled: true
+  secret: false
+  description: Base URL for /web routes, through the web's nginx (/api/web/ → API)
+- name: apiKey
+  value: ''
+  enabled: true
+  secret: true
+  description: 'Bot API key (plain text). Secret: stored only on this machine'
+- name: sessionCookie
+  value: ''
+  enabled: true
+  secret: true
+  description: 'Value of the happyx_session cookie after logging in on the web. Secret: stored only on this machine'
+- name: guildId
+  value: ''
+  enabled: true
+  secret: false
+  description: Discord server ID
+- name: userId
+  value: ''
+  enabled: true
+  secret: false
+  description: Discord user ID
+- name: otherUserId
+  value: ''
+  enabled: true
+  secret: false
+  description: Another member's Discord user ID (kudos receiver)
+- name: week
+  value: '2026-10-19'
+  enabled: true
+  secret: false
+  description: Monday of the game week, YYYY-MM-DD
+- name: from
+  value: ''
+  enabled: true
+  secret: false
+  description: Report start, YYYY-MM-DD. Leave from and to empty for the default period
+- name: to
+  value: ''
+  enabled: true
+  secret: false
+  description: Report end, YYYY-MM-DD

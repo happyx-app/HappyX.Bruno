@@ -1,0 +1,28 @@
+info:
+  name: Set access
+  type: http
+  seq: 4
+http:
+  method: PUT
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/access'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "admin_discord_user_id": "{{userId}}",
+        "grants": [
+          {
+            "kind": "role",
+            "id": "111111111111111111",
+            "level": "view"
+          }
+        ]
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Replaces all grants. `kind`: `user` | `role`; `level`: `view` | `manage`. Owners only.'

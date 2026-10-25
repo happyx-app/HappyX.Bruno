@@ -1,0 +1,20 @@
+info:
+  name: Propose question
+  type: http
+  seq: 4
+http:
+  method: PUT
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/game/proposal'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "question": "What's your hidden talent?"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true

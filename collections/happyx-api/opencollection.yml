@@ -1,0 +1,23 @@
+opencollection: 1.0.0
+info:
+  name: HappyX API
+config:
+  ignore:
+    - node_modules
+    - .git
+docs: |-
+  Every route of HappyX.Api.
+
+  - **Bot API (v1)**: what the Discord bot calls, with a Bearer API key (`apiKey`).
+  - **Web dashboard**: what the web calls, with the `happyx_session` cookie (`sessionCookie`).
+
+  Pick the `Local` or `Production` environment and fill its two secrets. Bruno keeps secret
+  values on your machine only; they never end up in these files.
+
+  ## apiKey
+  A key whose SHA-256 is listed in the API's `API_KEY_HASHES` (the bot's `API_KEY` works).
+
+  ## sessionCookie
+  The Discord login can't run inside Bruno. Log in on the web, open the browser's dev tools
+  (Application → Cookies), copy the value of `happyx_session` and paste it into `sessionCookie`.
+  It lasts 12 hours.

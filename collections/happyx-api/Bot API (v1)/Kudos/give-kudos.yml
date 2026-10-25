@@ -1,0 +1,23 @@
+info:
+  name: Give kudos
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/kudos'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from_discord_user_id": "{{userId}}",
+        "to_discord_user_id": "{{otherUserId}}",
+        "message": "Thanks for the help!"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 201 with the kudos. 403 if either user isn't a member, 429 when the giver hit today's limit.

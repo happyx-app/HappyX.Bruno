@@ -1,0 +1,22 @@
+info:
+  name: Start game round
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/game/rounds'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "week": "{{week}}",
+        "question": "What was your first job?"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Opens the week's round (`week` = Monday, YYYY-MM-DD). 409 when games are off or answering days are over.

@@ -1,0 +1,21 @@
+info:
+  name: Delete server
+  type: http
+  seq: 6
+http:
+  method: DELETE
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "confirm_name": "Exact server name"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Irreversible: deletes the server and all its data, then the bot leaves. `confirm_name` must match the server name. 204.'

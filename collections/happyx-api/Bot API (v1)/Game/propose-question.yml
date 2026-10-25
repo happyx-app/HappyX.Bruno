@@ -1,0 +1,21 @@
+info:
+  name: Propose question
+  type: http
+  seq: 4
+http:
+  method: PUT
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/game/proposals/{{userId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "question": "What's your hidden talent?"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Proposals open Thursday to Sunday; 409 from Monday to Wednesday.

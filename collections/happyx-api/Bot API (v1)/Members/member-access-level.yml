@@ -1,0 +1,16 @@
+info:
+  name: Member access level
+  type: http
+  seq: 5
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/members/{{userId}}/access?discord_admin=true'
+  params:
+  - name: discord_admin
+    value: 'true'
+    type: query
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Answers `{"level": "none"|"view"|"manage"|"owner"}`. `?discord_admin=true` says Discord reports them as owner or Administrator.'

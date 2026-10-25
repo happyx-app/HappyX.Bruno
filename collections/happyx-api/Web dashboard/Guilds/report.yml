@@ -1,0 +1,19 @@
+info:
+  name: Report
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/report?from={{from}}&to={{to}}'
+  params:
+  - name: from
+    value: '{{from}}'
+    type: query
+  - name: to
+    value: '{{to}}'
+    type: query
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Same as the bot report; needs `view` access.

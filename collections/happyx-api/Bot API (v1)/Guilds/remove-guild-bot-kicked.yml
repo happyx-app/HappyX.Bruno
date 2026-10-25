@@ -1,0 +1,12 @@
+info:
+  name: Remove guild (bot kicked)
+  type: http
+  seq: 5
+http:
+  method: DELETE
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'The bot was removed from the server: the guild is hidden and its data kept 30 days. 204.'

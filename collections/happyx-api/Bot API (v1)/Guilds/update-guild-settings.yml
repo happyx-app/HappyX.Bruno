@@ -1,0 +1,40 @@
+info:
+  name: Update guild settings
+  type: http
+  seq: 4
+http:
+  method: PATCH
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "anonymous": true,
+        "timezone": "Europe/Madrid",
+        "language": "es",
+        "survey_hour": 10,
+        "report_frequency": "weekly",
+        "report_dm": true,
+        "games_enabled": true,
+        "working_days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: |-
+  Every field is optional; send only what changes.
+
+  - `report_frequency`: `weekly` | `monthly`
+  - `working_days`: ISO days, 1 = Monday … 7 = Sunday
+  - `admin_discord_user_id`: change the main admin
+  - `kudos_channel_id`: `""` clears it
