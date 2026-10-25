@@ -1,4 +1,25 @@
+<div align="center">
+
+<a href="https://github.com/happyx-app/HappyX"><img src="https://raw.githubusercontent.com/happyx-app/HappyX/main/docs/images/logo.svg" alt="HappyX logo" width="72" height="72"></a>
+
 # HappyX.Bruno
+
+The API collection of **[HappyX](https://github.com/happyx-app/HappyX)**, the Discord bot that asks your team how they
+feel every working day and turns the answers into reports.
+
+[![Bruno](https://img.shields.io/badge/Bruno-3-F4AA41?style=flat-square)](https://www.usebruno.com/)
+
+[HappyX](https://github.com/happyx-app/HappyX) ·
+[Api](https://github.com/happyx-app/HappyX.Api) ·
+[Bot](https://github.com/happyx-app/HappyX.Bot) ·
+[Web](https://github.com/happyx-app/HappyX.Web) ·
+**Bruno**
+
+</div>
+
+> [!TIP]
+> New here? Start with the [main HappyX README](https://github.com/happyx-app/HappyX): what HappyX
+> does, screenshots, the architecture and how to self-host the whole stack.
 
 [Bruno](https://www.usebruno.com/) workspace with every call of [HappyX.Api](https://github.com/happyx-app/HappyX.Api).
 
