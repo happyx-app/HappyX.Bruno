@@ -35,16 +35,28 @@ feel every working day and turns the answers into reports.
 
 ## What's inside
 
-| Folder | Routes | Auth |
+| Folder / file | Routes | Auth |
 | --- | --- | --- |
-| `Health` | `GET /health` | none |
+| `health.yml` (collection root) | `GET /health` | none |
 | `Bot API (v1)` | `/v1/...`, what the Discord bot calls | `Authorization: Bearer {{apiKey}}` |
 | `Web dashboard` | `/web/...`, what the web calls | `Cookie: happyx_session={{sessionCookie}}` |
 
-`/v1` isn't published on the web domain (nginx only forwards `/api/web/`), so in `Production`
-set `apiUrl` to the API's port on the server (8083 by default). The Discord OAuth callback
-(`/web/auth/callback`) isn't in the collection: only Discord calls it.
+`/v1` and `/health` aren't published on the web domain (nginx only forwards `/api/web/`), and the
+stack binds the API's port (8083 by default) to the server's `127.0.0.1` only. To reach them from
+your machine in `Production`, open an SSH tunnel first and leave `apiUrl` as
+`http://localhost:8083`:
+
+```sh
+ssh -N -L 8083:127.0.0.1:8083 you@your-server
+```
+
+The `/web` routes go through the public dashboard, so set `webApiUrl` to `https://<your domain>/api`.
+The Discord OAuth callback (`/web/auth/callback`) isn't in the collection: only Discord calls it.
 
 ## Keep it in sync
 
 Any change to the API's routes or request bodies comes with the matching change here.
+
+## License
+
+[MIT](LICENSE).
