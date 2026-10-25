@@ -2,7 +2,7 @@ name: Production
 color: '#ef4444'
 variables:
 - name: apiUrl
-  value: http://NAS-IP:8083
+  value: http://SERVER-IP:8083
   enabled: true
   secret: false
   description: API base URL for /v1 and /health (the API's own port, not the web domain)
