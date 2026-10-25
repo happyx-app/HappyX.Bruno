@@ -1,0 +1,11 @@
+info:
+  name: List active guilds
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/guilds'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true

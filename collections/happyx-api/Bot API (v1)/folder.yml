@@ -1,0 +1,12 @@
+info:
+  name: Bot API (v1)
+  type: folder
+  seq: 2
+request:
+  auth:
+    type: bearer
+    token: '{{apiKey}}'
+docs: |-
+  Routes the Discord bot uses. They need `Authorization: Bearer <key>`, where the key's SHA-256 is in the API's `API_KEY_HASHES`.
+
+  These routes are not published on the web domain: nginx only forwards `/api/web/`. Call them on the API port (8083 by default).

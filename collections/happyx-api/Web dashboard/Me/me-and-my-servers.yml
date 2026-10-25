@@ -1,0 +1,12 @@
+info:
+  name: Me and my servers
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/me'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'The viewer, the servers they can see (`access`: `view` | `manage` | `owner`) and the servers whose game they can play.'

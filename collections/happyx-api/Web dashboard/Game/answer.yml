@@ -1,0 +1,20 @@
+info:
+  name: Answer
+  type: http
+  seq: 2
+http:
+  method: PUT
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/game/answer'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "answer": "Paper boy"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true

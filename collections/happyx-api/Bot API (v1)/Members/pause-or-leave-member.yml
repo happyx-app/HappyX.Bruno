@@ -1,0 +1,16 @@
+info:
+  name: Pause or leave member
+  type: http
+  seq: 4
+http:
+  method: DELETE
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/members/{{userId}}?left=true'
+  params:
+  - name: left
+    value: 'true'
+    type: query
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Stops the survey for the member (paused). With `?left=true`, they left the server. 204.

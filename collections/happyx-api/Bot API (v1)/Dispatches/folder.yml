@@ -1,0 +1,6 @@
+info:
+  name: Dispatches
+  type: folder
+  seq: 6
+request:
+  auth: inherit

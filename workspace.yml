@@ -4,6 +4,8 @@ info:
   type: workspace
 
 collections:
+  - name: "HappyX API"
+    path: "collections/happyx-api"
 
 specs:
 

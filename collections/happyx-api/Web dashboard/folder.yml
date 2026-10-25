@@ -1,0 +1,12 @@
+info:
+  name: Web dashboard
+  type: folder
+  seq: 3
+request:
+  headers:
+  - name: Cookie
+    value: happyx_session={{sessionCookie}}
+  auth:
+    type: none
+docs: |-
+  Routes the dashboard uses, behind the `happyx_session` cookie. See the collection docs to get it.

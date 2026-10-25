@@ -1,0 +1,12 @@
+info:
+  name: Login (open in browser)
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/auth/login'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: false
+docs: 'Redirects (302) to Discord OAuth. Bruno can''t complete it: log in from the browser and copy the `happyx_session` cookie into the `sessionCookie` secret of the environment (see collection docs).'

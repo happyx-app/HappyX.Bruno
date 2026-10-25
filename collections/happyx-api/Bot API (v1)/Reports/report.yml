@@ -1,0 +1,19 @@
+info:
+  name: Report
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/report?from={{from}}&to={{to}}'
+  params:
+  - name: from
+    value: '{{from}}'
+    type: query
+  - name: to
+    value: '{{to}}'
+    type: query
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Without `from`/`to` it returns the last complete period (week or month) of the guild. Both must be YYYY-MM-DD if given.

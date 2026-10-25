@@ -1,0 +1,28 @@
+info:
+  name: Sync roles
+  type: http
+  seq: 6
+http:
+  method: PUT
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/roles'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "roles": [
+          {
+            "id": "111111111111111111",
+            "name": "Team",
+            "color": 0,
+            "position": 1
+          }
+        ]
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Replaces the guild's Discord roles. 204.

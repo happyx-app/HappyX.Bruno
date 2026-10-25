@@ -1,0 +1,23 @@
+info:
+  name: Register guild
+  type: http
+  seq: 2
+http:
+  method: POST
+  url: '{{apiUrl}}/v1/guilds'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "discord_guild_id": "{{guildId}}",
+        "name": "My test server",
+        "admin_discord_user_id": "{{userId}}"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Registers the server or refreshes its name and admin. Answers the guild.

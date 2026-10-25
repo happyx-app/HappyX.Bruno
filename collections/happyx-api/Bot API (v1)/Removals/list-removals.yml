@@ -1,0 +1,12 @@
+info:
+  name: List removals
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/removals'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Discord IDs of servers deleted from the web that the bot must leave.

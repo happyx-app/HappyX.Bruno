@@ -1,0 +1,22 @@
+info:
+  name: Claim dispatch
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/dispatches'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "kind": "survey",
+        "period": "{{week}}"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: '`kind`: `survey` | `report` | `game` | `game_guess`. `period`: the survey day or first day of the report period. 201 when the caller should send it, 409 when already sent.'

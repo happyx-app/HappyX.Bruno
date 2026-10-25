@@ -1,0 +1,21 @@
+info:
+  name: Erase my data (GDPR)
+  type: http
+  seq: 4
+http:
+  method: DELETE
+  url: '{{webApiUrl}}/web/me/data'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "confirm_name": "your-discord-username"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Irreversible. `confirm_name` must be the viewer's Discord username. 204.

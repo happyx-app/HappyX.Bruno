@@ -1,0 +1,12 @@
+info:
+  name: Logout
+  type: http
+  seq: 3
+http:
+  method: POST
+  url: '{{webApiUrl}}/web/auth/logout'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Clears the session cookie. 204. The signed cookie value itself stays valid until it expires (12h).
