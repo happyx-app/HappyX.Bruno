@@ -1,0 +1,12 @@
+info:
+  name: Health
+  type: http
+  seq: 4
+http:
+  method: GET
+  url: '{{adminApiUrl}}/admin/health'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Bot (`last_seen`, `online`), API (`version`, `started_at`, the last 24 hours of requests, errors and p50/p95), sends and failed DMs for 14 days, database and latest backups.'

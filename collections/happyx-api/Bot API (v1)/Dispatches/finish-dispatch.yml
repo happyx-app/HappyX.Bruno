@@ -1,0 +1,22 @@
+info:
+  name: Finish dispatch
+  type: http
+  seq: 2
+http:
+  method: PUT
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/dispatches/survey/{{week}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "recipients": 12,
+        "failed": 1
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'After a claimed send: how many people it went to (`recipients`) and how many DMs failed (`failed`, optional, at most `recipients`). Path: `/dispatches/{kind}/{period}` as claimed. 204; 404 when it wasn''t claimed. Only counts, for the admin dashboard.'
