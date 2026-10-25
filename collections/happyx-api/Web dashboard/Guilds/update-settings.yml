@@ -32,6 +32,10 @@ http:
           "role_ids": [
             "{{roleId}}"
           ]
+        },
+        "game_roles": {
+          "mode": "all",
+          "role_ids": []
         }
       }
   auth: inherit
@@ -41,4 +45,4 @@ settings:
 docs: |-
   Needs `manage`. Every field optional. `survey_message: ""` goes back to the default text.
 
-  `survey_roles.mode`: `all` (everyone, `role_ids` empty), `except` (everyone but those roles) or `only` (just those roles). Pick the roles from Get roles.
+  `survey_roles.mode` and `game_roles.mode`: `all` (everyone, `role_ids` empty), `except` (everyone but those roles) or `only` (just those roles). Pick the roles from Get roles.

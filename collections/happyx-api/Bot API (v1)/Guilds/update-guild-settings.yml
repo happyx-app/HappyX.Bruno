@@ -31,6 +31,10 @@ http:
           "role_ids": [
             "{{roleId}}"
           ]
+        },
+        "game_roles": {
+          "mode": "all",
+          "role_ids": []
         }
       }
   auth: inherit
@@ -44,4 +48,4 @@ docs: |-
   - `working_days`: ISO days, 1 = Monday … 7 = Sunday
   - `admin_discord_user_id`: change the main admin
   - `kudos_channel_id`: `""` clears it
-  - `survey_roles`: who receives the survey by role. `mode` is `all` (everyone, `role_ids` empty), `except` (everyone but those roles) or `only` (just those roles); the roles must exist in the server
+  - `survey_roles` / `game_roles`: who receives the survey / plays the game, by role. `mode` is `all` (everyone, `role_ids` empty), `except` (everyone but those roles) or `only` (just those roles); the roles must exist in the server
