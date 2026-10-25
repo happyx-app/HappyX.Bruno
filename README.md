@@ -1,6 +1,6 @@
 # HappyX.Bruno
 
-[Bruno](https://www.usebruno.com/) workspace with every call of [HappyX.Api](https://github.com/moixblau/HappyX.Api).
+[Bruno](https://www.usebruno.com/) workspace with every call of [HappyX.Api](https://github.com/happyx-app/HappyX.Api).
 
 ## Open it
 
