@@ -1,0 +1,12 @@
+info:
+  name: Servers
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{adminApiUrl}}/admin/guilds'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Every server: `status` (`active` | `idle` | `left`, with `purge_at`), members, opted out, active in 7 days, last answer, recipients, answered and failed DMs in 7 days.'

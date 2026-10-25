@@ -1,0 +1,11 @@
+info:
+  name: Admin dashboard
+  type: folder
+  seq: 4
+request:
+  auth:
+    type: none
+docs: |-
+  Routes of HappyX.Admin, the dashboard for whoever runs HappyX. Only counts: never moods, messages or names.
+
+  The API serves them on its admin port (`ADMIN_ADDR`, 8081), which is never published. Call them through the HappyX.Admin container (`adminApiUrl`), whose nginx adds the admin key and only answers the local network, so no secret is needed here.

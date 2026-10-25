@@ -1,0 +1,12 @@
+info:
+  name: Overview
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{adminApiUrl}}/admin/overview'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Servers with the bot, idle (no answers for 14 days), left and deleted; people active today, in 7 and 30 days; usage; failed DMs in 7 days by kind; the last 30 `days` and 12 `weeks` (recipients, answered, answers, joins, leaves, guilds).'

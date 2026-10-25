@@ -10,6 +10,7 @@ docs: |-
 
   - **Bot API (v1)**: what the Discord bot calls, with a Bearer API key (`apiKey`).
   - **Web dashboard**: what the web calls, with the `happyx_session` cookie (`sessionCookie`).
+  - **Admin dashboard**: what HappyX.Admin calls, through its nginx (`adminApiUrl`), which adds the admin key.
 
   Pick the `Local` or `Production` environment and fill its two secrets. Bruno keeps secret
   values on your machine only; they never end up in these files.

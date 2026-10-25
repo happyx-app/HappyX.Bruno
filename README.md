@@ -13,6 +13,7 @@ feel every working day and turns the answers into reports.
 [Api](https://github.com/happyx-app/HappyX.Api) ·
 [Bot](https://github.com/happyx-app/HappyX.Bot) ·
 [Web](https://github.com/happyx-app/HappyX.Web) ·
+[Admin](https://github.com/happyx-app/HappyX.Admin) ·
 **Bruno**
 
 </div>
@@ -40,6 +41,7 @@ feel every working day and turns the answers into reports.
 | `health.yml` (collection root) | `GET /health` | none |
 | `Bot API (v1)` | `/v1/...`, what the Discord bot calls | `Authorization: Bearer {{apiKey}}` |
 | `Web dashboard` | `/web/...`, what the web calls | `Cookie: happyx_session={{sessionCookie}}` |
+| `Admin dashboard` | `/admin/...`, what [HappyX.Admin](https://github.com/happyx-app/HappyX.Admin) calls | none: HappyX.Admin's nginx adds the admin key |
 
 `/v1` and `/health` aren't published on the web domain (nginx only forwards `/api/web/`), and the
 stack binds the API's port (8083 by default) to the server's `127.0.0.1` only. To reach them from
@@ -51,6 +53,8 @@ ssh -N -L 8083:127.0.0.1:8083 you@your-server
 ```
 
 The `/web` routes go through the public dashboard, so set `webApiUrl` to `https://<your domain>/api`.
+The `/admin` routes go through the HappyX.Admin container, which only answers your local network:
+set `adminApiUrl` to `http://<server on your network>:8090/api`.
 The Discord OAuth callback (`/web/auth/callback`) isn't in the collection: only Discord calls it.
 
 ## Keep it in sync

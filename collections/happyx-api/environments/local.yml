@@ -11,6 +11,11 @@ variables:
   enabled: true
   secret: false
   description: Base URL for /web routes, through the web's nginx (/api/web/ → API)
+- name: adminApiUrl
+  value: http://localhost:8090/api
+  enabled: true
+  secret: false
+  description: Base URL for /admin routes, through HappyX.Admin (its nginx, or `npm run dev`, adds the admin key)
 - name: apiKey
   value: ''
   enabled: true

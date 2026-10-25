@@ -1,0 +1,12 @@
+info:
+  name: Settings
+  type: http
+  seq: 5
+http:
+  method: GET
+  url: '{{adminApiUrl}}/admin/settings'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'How the servers with the bot are set up: for each setting, `[{value, guilds}]`.'
