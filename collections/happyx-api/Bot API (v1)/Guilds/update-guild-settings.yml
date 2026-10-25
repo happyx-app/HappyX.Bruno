@@ -25,7 +25,13 @@ http:
           3,
           4,
           5
-        ]
+        ],
+        "survey_roles": {
+          "mode": "except",
+          "role_ids": [
+            "{{roleId}}"
+          ]
+        }
       }
   auth: inherit
 settings:
@@ -38,3 +44,4 @@ docs: |-
   - `working_days`: ISO days, 1 = Monday … 7 = Sunday
   - `admin_discord_user_id`: change the main admin
   - `kudos_channel_id`: `""` clears it
+  - `survey_roles`: who receives the survey by role. `mode` is `all` (everyone, `role_ids` empty), `except` (everyone but those roles) or `only` (just those roles); the roles must exist in the server

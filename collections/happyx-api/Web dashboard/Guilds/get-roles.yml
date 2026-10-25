@@ -1,0 +1,12 @@
+info:
+  name: Get roles
+  type: http
+  seq: 7
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/roles'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: The server's Discord roles, highest first, for the settings' role pickers. Needs `manage`.
