@@ -2,10 +2,10 @@ name: Production
 color: '#ef4444'
 variables:
 - name: apiUrl
-  value: http://SERVER-IP:8083
+  value: http://localhost:8083
   enabled: true
   secret: false
-  description: API base URL for /v1 and /health (the API's own port, not the web domain)
+  description: API base URL for /v1 and /health, through an SSH tunnel to the server (ssh -N -L 8083:127.0.0.1:8083 you@your-server)
 - name: webApiUrl
   value: https://happyx.example.com/api
   enabled: true
