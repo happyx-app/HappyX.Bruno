@@ -36,6 +36,11 @@ variables:
   enabled: true
   secret: false
   description: Another member's Discord user ID (kudos receiver)
+- name: roleId
+  value: ''
+  enabled: true
+  secret: false
+  description: A Discord role ID of the server (survey roles)
 - name: week
   value: '2026-10-19'
   enabled: true

@@ -26,10 +26,19 @@ http:
           4,
           5
         ],
-        "survey_message": ""
+        "survey_message": "",
+        "survey_roles": {
+          "mode": "except",
+          "role_ids": [
+            "{{roleId}}"
+          ]
+        }
       }
   auth: inherit
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'Needs `manage`. Every field optional. `survey_message: ""` goes back to the default text.'
+docs: |-
+  Needs `manage`. Every field optional. `survey_message: ""` goes back to the default text.
+
+  `survey_roles.mode`: `all` (everyone, `role_ids` empty), `except` (everyone but those roles) or `only` (just those roles). Pick the roles from Get roles.
