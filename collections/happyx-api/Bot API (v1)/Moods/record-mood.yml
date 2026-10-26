@@ -20,4 +20,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: '`mood` 1–5. `day` is optional (YYYY-MM-DD); empty means today in the guild''s timezone.'
+docs: '`mood` 1–5. `day` is optional (YYYY-MM-DD); empty means today in the guild''s timezone. The reply includes `streak`: the days in a row they have answered, counting this answer (left out if it can''t be counted).'
