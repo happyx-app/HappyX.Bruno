@@ -46,6 +46,11 @@ variables:
   enabled: true
   secret: false
   description: A Discord role ID of the server (survey roles)
+- name: channelId
+  value: ''
+  enabled: true
+  secret: false
+  description: A text channel ID of the server (kudos channel)
 - name: week
   value: '2026-10-19'
   enabled: true
