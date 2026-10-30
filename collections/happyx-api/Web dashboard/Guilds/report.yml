@@ -16,4 +16,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: Same as the bot report; needs `view` access.
+docs: 'Same as the bot report; needs `view` access. Includes `participation` (surveys sent and answered on days with known `recipients`) and `kudos.top_receivers`.'

@@ -16,4 +16,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: Without `from`/`to` it returns the last complete period (week or month) of the guild. Both must be YYYY-MM-DD if given.
+docs: "Without `from`/`to` it returns the last complete period (week or month) of the guild. Both must be YYYY-MM-DD if given. Days with a known number of survey `recipients` carry it, and then the report has `participation` (`recipients`, `answered`); `kudos.top_receivers` lists the top three."

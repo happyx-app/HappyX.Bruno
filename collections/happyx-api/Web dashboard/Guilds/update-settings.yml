@@ -19,6 +19,7 @@ http:
         "report_frequency": "weekly",
         "report_dm": true,
         "games_enabled": true,
+        "kudos_channel_id": "{{channelId}}",
         "working_days": [
           1,
           2,
@@ -43,6 +44,6 @@ settings:
   encodeUrl: true
   followRedirects: true
 docs: |-
-  Needs `manage`. Every field optional. `survey_message: ""` goes back to the default text.
+  Needs `manage`. Every field optional. `survey_message: ""` goes back to the default text. `kudos_channel_id` is one of Get channels, or `""` to post where `/happyx kudos` is used.
 
   `survey_roles.mode` and `game_roles.mode`: `all` (everyone, `role_ids` empty), `except` (everyone but those roles) or `only` (just those roles). Pick the roles from Get roles.
