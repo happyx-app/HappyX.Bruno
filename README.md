@@ -61,6 +61,10 @@ The Discord OAuth callback (`/web/auth/callback`) isn't in the collection: only 
 
 Any change to the API's routes or request bodies comes with the matching change here.
 
+## How it's built
+
+HappyX is developed with AI assistance. Every change is reviewed and approved by the maintainer before it's merged.
+
 ## License
 
-[MIT](LICENSE).
+[MIT](LICENSE). The rest of HappyX is under AGPL-3.0, but this collection is only a set of example requests, so it stays MIT.
