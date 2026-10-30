@@ -1,0 +1,12 @@
+info:
+  name: Release dispatch
+  type: http
+  seq: 3
+http:
+  method: DELETE
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/dispatches/survey/{{week}}'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Gives back a claim whose send reached nobody (the API or Discord failed, or every DM failed), so the next claim for that period can try again, up to 3 tries in all. Path: `/dispatches/{kind}/{period}` as claimed. 204; 404 when it isn''t claimed or is already given back.'

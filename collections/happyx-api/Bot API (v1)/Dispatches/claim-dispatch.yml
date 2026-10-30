@@ -19,4 +19,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: '`kind`: `survey` | `report` | `game` | `game_guess`. `period`: the survey day or first day of the report period. 201 when the caller should send it, 409 when already sent.'
+docs: '`kind`: `survey` | `report` | `game` | `game_guess`. `period`: the survey day or first day of the report period. 201 when the caller should send it, 409 when already sent (or it reached nobody 3 times).'
