@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'Servers with the bot, idle (no answers for 14 days), left and deleted; people active today, in 7 and 30 days; usage; failed DMs in 7 days by kind; the last 30 `days` and 12 `weeks` (recipients, answered, answers, joins, leaves, guilds); `phase0`: active servers (5+ people answering in 7 days), servers past 15 people, Pro waitlist answers by price.'
+docs: 'Servers with the bot, idle (no answers for 14 days), left and deleted; people active today, in 7 and 30 days; usage; failed DMs in 7 days by kind; the last 30 `days` and 12 `weeks` (recipients, answered, answers, joins, leaves, guilds); `phase0`: active servers (5+ people answering in 7 days) and servers past 15 people.'
