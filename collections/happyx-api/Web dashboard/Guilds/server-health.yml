@@ -1,0 +1,12 @@
+info:
+  name: Server health
+  type: http
+  seq: 8
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/health'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Who the survey reaches now (`audience`: opted in, in the server, allowed by the survey roles), `opted_out`, and `last_survey` (`day`, `recipients`, `failed`; `null` if none in the last 14 days). Needs `view`.'
