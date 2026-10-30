@@ -1,0 +1,12 @@
+info:
+  name: Get channels
+  type: http
+  seq: 8
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/channels'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: The server's text and announcement channels (`id`, `name`, `category`, `position`, `can_post`), in Discord's order, for the kudos channel picker. Needs `manage`.

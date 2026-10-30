@@ -1,0 +1,29 @@
+info:
+  name: Sync channels
+  type: http
+  seq: 9
+http:
+  method: PUT
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/channels'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "channels": [
+          {
+            "id": "{{channelId}}",
+            "name": "kudos",
+            "category": "Team",
+            "position": 0,
+            "can_post": true
+          }
+        ]
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Replaces the guild's text and announcement channels (up to 500). `position` is the order in Discord's channel list, `can_post` whether the bot may post there. A deleted kudos channel is cleared. 204.
