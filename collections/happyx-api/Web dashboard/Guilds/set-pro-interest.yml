@@ -1,0 +1,22 @@
+info:
+  name: Set Pro waitlist answer
+  type: http
+  seq: 10
+http:
+  method: PUT
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/pro-interest'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "interested": true,
+        "price": "9"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Stores the server''s «I''m interested» and «How much would you pay?» (`price`: `""`, `"0"`, `"5"`, `"9"` or `"29"`). Needs `manage`.'
