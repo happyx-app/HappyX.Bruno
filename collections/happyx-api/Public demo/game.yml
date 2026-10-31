@@ -1,0 +1,12 @@
+info:
+  name: Game board
+  type: http
+  seq: 8
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/demo/{{demoLang}}/guilds/100000000000000001/game'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: '«Who''s who?»: this week''s round and last week''s, as the demo admin sees them.'

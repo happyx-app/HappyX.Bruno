@@ -1,0 +1,12 @@
+info:
+  name: Me and my servers
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/demo/{{demoLang}}/me'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'The demo admin (Laura) and the demo server, with `access` `owner`.'
