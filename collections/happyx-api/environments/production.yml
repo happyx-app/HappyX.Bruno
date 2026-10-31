@@ -66,3 +66,8 @@ variables:
   enabled: true
   secret: false
   description: Report end, YYYY-MM-DD
+- name: demoLang
+  value: en
+  enabled: true
+  secret: false
+  description: Language of the public demo, en or es
