@@ -16,4 +16,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: Members the daily survey goes to, after the server's `survey_roles`. `?with=streak` is optional.
+docs: Members the daily survey goes to, after the server's `survey_roles`. `?with=streak` is optional. `policy_pending: true` marks members who haven't answered in the server since the privacy policy's date; their survey links the policy.
