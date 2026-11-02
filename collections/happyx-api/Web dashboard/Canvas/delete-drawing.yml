@@ -1,0 +1,15 @@
+info:
+  name: Delete drawing
+  type: http
+  seq: 3
+http:
+  method: DELETE
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/canvas/drawings/d-1730542800000'
+  headers:
+  - name: Content-Type
+    value: application/json
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Deletes all the strokes of a drawing and returns the new `version`. Members delete only their own; moderators (`manage`) any, also while the canvas is off. 404 when there is nothing to delete.

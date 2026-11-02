@@ -1,0 +1,27 @@
+info:
+  name: Add stroke
+  type: http
+  seq: 2
+http:
+  method: POST
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/canvas/strokes'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "drawing_id": "d-1730542800000",
+        "color": 0,
+        "anchor": [0.08, 0.4],
+        "points": [0, 0, 12, -6, 24, 2]
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: |-
+  201 with `stroke` and the new `version`. `drawing_id` (1–36 of `A-Z a-z 0-9 _ -`) groups strokes into one drawing; reuse it to add to a drawing. 2–500 points, each within ±4000 px of the anchor.
+
+  409 when the canvas is off or full (3000 strokes per server); 429 after 60 strokes in a minute by the same person.

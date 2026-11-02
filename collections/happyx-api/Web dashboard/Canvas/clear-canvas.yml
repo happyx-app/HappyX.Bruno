@@ -1,0 +1,15 @@
+info:
+  name: Clear canvas
+  type: http
+  seq: 4
+http:
+  method: DELETE
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/canvas'
+  headers:
+  - name: Content-Type
+    value: application/json
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: Deletes every drawing on the canvas and returns the new `version`. Needs `manage`.
