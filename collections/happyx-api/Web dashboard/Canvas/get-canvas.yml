@@ -10,7 +10,7 @@ settings:
   encodeUrl: true
   followRedirects: true
 docs: |-
-  The team canvas: `enabled`, `version`, `can_moderate` and `strokes`, oldest first. For anyone with `view` access or who plays «Who's who?»; others get 404.
+  The team canvas: `enabled`, `version`, `can_moderate` and `strokes`, oldest first. For anyone with `view` access or still in the Discord server, whether or not they play «Who's who?»; others get 404.
 
   Each stroke: `id`, `drawing_id`, `color` (0–4), `anchor` ([x, y] as fractions of the viewport), `points` (flat pixel offsets from the anchor: x0, y0, x1, y1…), `mine` and `created_at`. `author` (`discord_user_id`, `username`) only for moderators (`manage`).
 
