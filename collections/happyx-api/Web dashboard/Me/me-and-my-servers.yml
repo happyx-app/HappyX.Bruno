@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'The viewer, the servers they can see (`access`: `view` | `manage` | `owner`) and the servers whose game they can play.'
+docs: 'The viewer, the servers they can see (`access`: `view` | `manage` | `owner`) the servers whose game they can play (`games`) and the servers with HappyX where they are a member without dashboard access (`member_guilds`, id and name only).'
