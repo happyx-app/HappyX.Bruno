@@ -12,6 +12,7 @@ http:
     type: json
     data: |-
       {
+        "survey_enabled": true,
         "anonymous": true,
         "timezone": "Europe/Madrid",
         "language": "es",
@@ -50,3 +51,5 @@ docs: |-
   `survey_roles.mode` and `game_roles.mode`: `all` (everyone, `role_ids` empty), `except` (everyone but those roles) or `only` (just those roles). Pick the roles from Get roles.
 
   `canvas_enabled` turns the team canvas on or off (see Canvas); turning it off keeps the drawings.
+
+  `survey_enabled` starts or stops the daily survey and the game. A server the bot just joined has it `false` until the admin starts it.
