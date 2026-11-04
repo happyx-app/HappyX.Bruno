@@ -4,9 +4,13 @@ info:
   seq: 1
 http:
   method: GET
-  url: '{{webApiUrl}}/web/auth/login'
+  url: '{{webApiUrl}}/web/auth/login?next=/g/{{guildId}}'
+  params:
+  - name: next
+    value: /g/{{guildId}}
+    type: query
   auth: inherit
 settings:
   encodeUrl: true
   followRedirects: false
-docs: 'Redirects (302) to Discord OAuth. Bruno can''t complete it: log in from the browser and copy the `happyx_session` cookie into the `sessionCookie` secret of the environment (see collection docs).'
+docs: 'Redirects (302) to Discord OAuth. Bruno can''t complete it: log in from the browser and copy the `happyx_session` cookie into the `sessionCookie` secret of the environment (see collection docs). Optional `next`: the dashboard route to open after logging in, e.g. `/g/<guildID>` or `/game/<guildID>` (letters, digits, `-`, `_` and `/` only; anything else is ignored and the user lands on `/`).'
