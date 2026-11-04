@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: false
-docs: Redirects (302) to the Discord "Add to server" page.
+docs: 'Redirects (302) to the Discord "Add to server" page, which also logs the user in (scopes `bot applications.commands identify guilds`, sets the OAuth state cookie). Discord comes back to `/web/auth/callback` with `guild_id`, and the callback sends the browser to `/#/g/<guild_id>?added=1`.'
