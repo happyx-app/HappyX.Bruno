@@ -1,0 +1,12 @@
+info:
+  name: Get dispatch
+  type: http
+  seq: 4
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/dispatches/survey/{{week}}'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Whether the period was already claimed for sending. Path: `/dispatches/{kind}/{period}`. 200 when a claim stands; 404 when it was never claimed or was given back. The bot uses it to tell an admin who restarts the survey whether today''s already went out.'
