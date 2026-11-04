@@ -16,4 +16,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'Own answers in every server. Default: last 30 days.'
+docs: 'Own answers in every server. Default: last 30 days. Each server has `anonymous`: whether the admin sees who answers.'
