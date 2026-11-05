@@ -1,0 +1,21 @@
+info:
+  name: Pause or resume my survey
+  type: http
+  seq: 5
+http:
+  method: PUT
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/me/survey'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "active": true
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'The web''s `/happyx resume`: `active: true` sends the viewer the server''s survey again, `active: false` pauses it like the «don''t ask me again» button. Only for someone in that Discord server; otherwise 404. Requires `Content-Type: application/json` (415 otherwise). Answers `{"active": true|false}`.'
