@@ -13,4 +13,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: Members who play «Who's who?», after the server's `game_roles`. The bot sends the game DMs to them.
+docs: Members who play «Who's who?», after the server's `game_roles`, without those on vacation today. The bot sends the game DMs to them.

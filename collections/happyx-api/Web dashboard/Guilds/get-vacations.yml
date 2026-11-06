@@ -1,0 +1,12 @@
+info:
+  name: Get vacations
+  type: http
+  seq: 11
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/vacations'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: '`{vacations, members}`: vacations of members still in the server that haven''t ended (`discord_user_id`, `username`, `from`, `to`, `set_here`: `false` for the member''s own, which admins can''t change), and the members who can be given one. Needs manage.'

@@ -1,0 +1,15 @@
+info:
+  name: Remove my vacation
+  type: http
+  seq: 11
+http:
+  method: DELETE
+  url: '{{webApiUrl}}/web/me/vacation'
+  headers:
+  - name: Content-Type
+    value: application/json
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Removes the viewer''s own vacation. 204; 404 if none. Requires `Content-Type: application/json`.'

@@ -1,0 +1,22 @@
+info:
+  name: Set my vacation
+  type: http
+  seq: 10
+http:
+  method: PUT
+  url: '{{webApiUrl}}/web/me/vacation'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from": "2026-12-22",
+        "to": "2027-01-06"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Sets the viewer''s own vacation, for every server, replacing the one they had. Dates `YYYY-MM-DD`, both included, at most 90 days. Requires `Content-Type: application/json` (415 otherwise).'

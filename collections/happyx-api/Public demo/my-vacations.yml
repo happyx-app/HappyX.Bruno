@@ -1,0 +1,12 @@
+info:
+  name: My vacations
+  type: http
+  seq: 10
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/demo/{{demoLang}}/me/vacations'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'The demo has no vacations: `{own: null, set_by_admins: []}`.'

@@ -1,0 +1,22 @@
+info:
+  name: Set member vacation
+  type: http
+  seq: 12
+http:
+  method: PUT
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/vacations/{{otherUserId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from": "2026-12-22",
+        "to": "2027-01-06"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Sets the member''s vacation in this server only, replacing the one set here before; the bot tells them by DM. Needs manage and `Content-Type: application/json`.'

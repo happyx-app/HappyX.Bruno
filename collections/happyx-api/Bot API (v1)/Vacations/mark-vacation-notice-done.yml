@@ -1,0 +1,12 @@
+info:
+  name: Mark vacation notice done
+  type: http
+  seq: 5
+http:
+  method: DELETE
+  url: '{{apiUrl}}/v1/vacation-notices/{{vacationNoticeId}}'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'The bot told the member, or couldn''t (DMs closed). 204; 404 if it wasn''t pending.'

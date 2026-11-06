@@ -1,0 +1,12 @@
+info:
+  name: My vacations
+  type: http
+  seq: 9
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/me/vacations'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: '`{own, set_by_admins}`: the viewer''s own vacation (`{from, to}`, `null` if none), which applies in every server, and the ones admins set for them (each with `discord_guild_id` and `guild_name`). Only those that haven''t ended.'
