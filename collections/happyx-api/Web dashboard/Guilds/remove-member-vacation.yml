@@ -1,0 +1,15 @@
+info:
+  name: Remove member vacation
+  type: http
+  seq: 13
+http:
+  method: DELETE
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/vacations/{{otherUserId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Removes the vacation set for the member in this server (not their own). 204; 404 if none. Needs manage and `Content-Type: application/json`.'

@@ -1,0 +1,15 @@
+info:
+  name: Remove vacation set by an admin
+  type: http
+  seq: 12
+http:
+  method: DELETE
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/me/vacation'
+  headers:
+  - name: Content-Type
+    value: application/json
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Removes the vacation an admin set for the viewer in this server. 204; 404 if none. Requires `Content-Type: application/json`.'

@@ -1,0 +1,12 @@
+info:
+  name: Member vacations
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/members/{{userId}}/vacations'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'The vacations that apply to the member in the server and haven''t ended: `[{from, to, discord_guild_id, set_by_admin}]`. `discord_guild_id` is left out for their own, which applies in every server.'

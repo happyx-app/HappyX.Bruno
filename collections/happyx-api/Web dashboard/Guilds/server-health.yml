@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'Who the survey reaches now (`audience`: opted in, in the server, allowed by the survey roles), `opted_out`, and `last_survey` (`day`, `recipients`, `failed`; `null` if none in the last 14 days). Needs `view`.'
+docs: 'Who the survey reaches now (`audience`: opted in, in the server, allowed by the survey roles, not on vacation today), `opted_out`, `on_vacation`, and `last_survey` (`day`, `recipients`, `failed`; `null` if none in the last 14 days). Needs `view`.'

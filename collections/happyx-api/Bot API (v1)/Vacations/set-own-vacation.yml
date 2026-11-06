@@ -1,0 +1,22 @@
+info:
+  name: Set own vacation
+  type: http
+  seq: 2
+http:
+  method: PUT
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/members/{{userId}}/vacation'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from": "2026-12-22",
+        "to": "2027-01-06"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: '`/happyx vacation`: the member''s own vacation, for every server, replacing the one they had. Dates `YYYY-MM-DD`, both included, at most 90 days, not already ended (in this server''s timezone), starting at most a year ahead. No survey or game on those days.'

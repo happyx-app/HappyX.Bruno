@@ -71,3 +71,8 @@ variables:
   enabled: true
   secret: false
   description: Language of the public demo, en or es
+- name: vacationNoticeId
+  value: ''
+  enabled: true
+  secret: false
+  description: id of a vacation notice, from List vacation notices
