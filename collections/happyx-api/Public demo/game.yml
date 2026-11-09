@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: '«Who''s who?»: this week''s round and last week''s, as the demo admin sees them.'
+docs: '«Who''s who?»: this week''s round, last week''s and the `history` of older ones, as the demo admin sees them.'
