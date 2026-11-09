@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'The viewer, the servers they can see (`access`: `view` | `manage` | `owner`) the servers whose game they can play (`games`) the servers with HappyX where they are a member without dashboard access (`member_guilds`, id and name only), and the servers where they paused the survey with «don''t ask me again» (`paused_guilds`, id and name only; resume with "Pause or resume my survey").'
+docs: 'The viewer, the servers they can see (`access`: `view` | `manage` | `owner`; for `view` and `manage`, `admin_username` names the main admin when known, so the web can say whom to ask for permission), the servers whose game they can play (`games`) the servers with HappyX where they are a member without dashboard access (`member_guilds`, id and name only), and the servers where they paused the survey with «don''t ask me again» (`paused_guilds`, id and name only; resume with "Pause or resume my survey").'
