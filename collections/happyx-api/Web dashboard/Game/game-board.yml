@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'This week''s round, last week''s results and `history`: the finished rounds before those, newest first, up to 26 weeks. Each history round has the team''s `guesses` and `correct`, your own `mine` and `my_guesses`, and who wrote what. Nobody else''s score.'
+docs: 'This week''s round, last week''s results and `history`: the finished rounds before those, newest first, up to 52 weeks. Each history round has the team''s `guesses` and `correct`, your own `mine` and `my_guesses`, and who wrote what. Nobody else''s score.'
