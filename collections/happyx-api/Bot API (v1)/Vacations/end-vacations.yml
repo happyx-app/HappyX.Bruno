@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: '`/happyx resume`: ends the member''s own vacation and the one an admin set for them in this server. 204, also when there was none.'
+docs: '`/happyx resume`: the member is back. Their vacations that cover today in this server (their own, in every server, and the one an admin set for them here) end yesterday, so today''s survey reaches them; one starting today is removed. The days already gone stay vacation, and vacations planned for later stay. 200 with the ones it ended, as they were: `[{from, to, discord_guild_id, set_by_admin}]`, empty when there were none.'
