@@ -1,0 +1,12 @@
+info:
+  name: Get team note
+  type: http
+  seq: 4
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/team-notes/{{noteId}}'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'One note, for the buttons after publishing (edit, delete). 404 when it was deleted.'

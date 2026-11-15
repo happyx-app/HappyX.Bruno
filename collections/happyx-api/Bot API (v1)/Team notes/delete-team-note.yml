@@ -1,0 +1,12 @@
+info:
+  name: Delete team note
+  type: http
+  seq: 6
+http:
+  method: DELETE
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/team-notes/{{noteId}}'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Forgets the note once the bot has deleted the message from the channel. 204; 404 when already gone.'

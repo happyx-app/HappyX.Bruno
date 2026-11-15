@@ -1,0 +1,12 @@
+info:
+  name: Team note for a period
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/team-notes?from=2026-11-09&to=2026-11-15'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'The note already told about that report period (`from`/`to`, YYYY-MM-DD), so «Tell the team» pressed again edits it instead of posting another. 404 when there is none.'

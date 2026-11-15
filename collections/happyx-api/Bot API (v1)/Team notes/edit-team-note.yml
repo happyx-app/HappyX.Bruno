@@ -1,0 +1,21 @@
+info:
+  name: Edit team note
+  type: http
+  seq: 5
+http:
+  method: PATCH
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/team-notes/{{noteId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "body": "Martes por la tarde sin reuniones desde el lunes. Lo revisamos en dos semanas."
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Changes the text once the bot has edited the message in the channel. `body` 1-1000 characters.'
