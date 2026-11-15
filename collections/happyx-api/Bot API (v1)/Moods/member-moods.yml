@@ -1,0 +1,12 @@
+info:
+  name: Member moods
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/members/{{userId}}/moods?from=2026-11-09&to=2026-11-15'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'The member''s own answers in this server from `from` to `to` (YYYY-MM-DD, at most 31 days), oldest first: `[{discord_user_id, day, mood, message}]`. The bot shows them only to that member: «Your week» on the thanks card of the week''s last working day, or today''s answer when they answer from the team channel. 400 for a bad range; 404 when they aren''t a member.'

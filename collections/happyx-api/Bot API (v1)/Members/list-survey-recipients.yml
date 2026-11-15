@@ -16,4 +16,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: "Members the daily survey goes to, after the server's `survey_roles`, without those on vacation today. `?with=streak` is optional. `policy_pending: true` marks members who haven't answered in the server since the privacy policy's date; their survey links the policy."
+docs: "Members the daily survey goes to, after the server's `survey_roles`, without those on vacation today. `?with=streak` is optional. `?day=YYYY-MM-DD` leaves out who was on vacation that day instead: who got that day's survey, for «Answer today» before today's goes out. `policy_pending: true` marks members who haven't answered in the server since the privacy policy's date; their survey links the policy."

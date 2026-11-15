@@ -1,0 +1,22 @@
+info:
+  name: Put channel post
+  type: http
+  seq: 2
+http:
+  method: PUT
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/channel-posts/survey'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "channel_id": "{{channelId}}",
+        "message_id": "1300000000000000002"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Records where the bot has just published the message of that kind, replacing the one before (when the team channel changed, or the old message was deleted). 400 for an unknown kind or IDs that aren''t snowflakes; 404 when the server isn''t registered.'

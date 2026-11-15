@@ -1,0 +1,12 @@
+info:
+  name: User guilds
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/users/{{userId}}/guilds'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'The active servers the user is in, whether or not they get the survey there, by name: each like «Get guild», plus `paused` (they paused the survey there). `/happyx` in a DM with the bot uses it to act on the right server, and asks which one when there are several. 400 when the ID isn''t a snowflake.'

@@ -1,0 +1,12 @@
+info:
+  name: Get channel post
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/guilds/{{guildId}}/channel-posts/survey'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Where the bot keeps one of its messages in a channel: `{kind, channel_id, message_id, created_at}`. The only kind is `survey`: the daily survey for whoever doesn''t get HappyX''s DMs, answered privately from its «Answer today» button. The bot posts it in the team channel the first time a survey DM fails because the person has DMs closed, and checks it is still there before posting another. 404 when there is none.'

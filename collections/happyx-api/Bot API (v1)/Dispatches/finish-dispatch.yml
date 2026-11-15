@@ -13,10 +13,11 @@ http:
     data: |-
       {
         "recipients": 12,
-        "failed": 1
+        "failed": 1,
+        "closed_dms": 1
       }
   auth: inherit
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'After a claimed send: how many people it went to (`recipients`) and how many DMs failed (`failed`, optional, at most `recipients`). Path: `/dispatches/{kind}/{period}` as claimed. 204; 404 when it wasn''t claimed. Only counts, for the admin dashboard.'
+docs: 'After a claimed send: how many people it went to (`recipients`) and how many DMs failed (`failed`, optional, at most `recipients`) and, of those, how many because the person has DMs closed (`closed_dms`, optional, at most `failed`). Path: `/dispatches/{kind}/{period}` as claimed. 204; 404 when it wasn''t claimed. Only counts, for the admin dashboard and the server's status.'
