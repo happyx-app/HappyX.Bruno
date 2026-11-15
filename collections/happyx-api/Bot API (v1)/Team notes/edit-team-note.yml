@@ -1,7 +1,7 @@
 info:
   name: Edit team note
   type: http
-  seq: 4
+  seq: 5
 http:
   method: PATCH
   url: '{{apiUrl}}/v1/guilds/{{guildId}}/team-notes/{{noteId}}'

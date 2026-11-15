@@ -1,7 +1,7 @@
 info:
   name: Delete team note
   type: http
-  seq: 5
+  seq: 6
 http:
   method: DELETE
   url: '{{apiUrl}}/v1/guilds/{{guildId}}/team-notes/{{noteId}}'
