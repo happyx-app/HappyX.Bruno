@@ -23,4 +23,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: '«Tell the team» from the report: records a note the bot has just posted in the team channel, so it can be edited or deleted later and the next survey day''s thanks card can link it. `from`/`to` are the report''s period (YYYY-MM-DD); `body` 1-1000 characters; `posted_on` is today in the server''s timezone. 404 when the author isn''t a member. The bot checks the author can manage the server before posting.'
+docs: '«Tell the team» from the report: records a note the bot has just posted in the team channel, so it can be edited or deleted later and the next survey day''s thanks card can link it. `from`/`to` are the report''s period (YYYY-MM-DD); `body` 1-1000 characters; `posted_on` is today in the server''s timezone. 404 when the author isn''t a member; 409 when the period already has a note (one per period). The bot checks the author can manage the server before posting.'
