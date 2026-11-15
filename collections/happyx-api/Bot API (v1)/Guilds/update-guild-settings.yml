@@ -21,6 +21,8 @@ http:
         "report_frequency": "weekly",
         "report_dm": true,
         "games_enabled": true,
+        "team_channel_id": "{{channelId}}",
+        "team_summary": true,
         "working_days": [
           1,
           2,
@@ -54,3 +56,5 @@ docs: |-
   - `admin_discord_user_id`: change the main admin
   - `kudos_channel_id`: `""` clears it; once the bot has sent the channels (Sync channels), it must be one of them
   - `survey_roles` / `game_roles`: who receives the survey / plays the game, by role. `mode` is `all` (everyone, `role_ids` empty), `except` (everyone but those roles) or `only` (just those roles); the roles must exist in the server
+  - `team_channel_id`: where HappyX tells the team things (notes after a report, the Monday summary); `""` uses the kudos channel. Like `kudos_channel_id`, it must be one of the synced channels
+  - `team_summary`: post the past week's summary in the team channel on Mondays (default `true`)

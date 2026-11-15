@@ -1,0 +1,6 @@
+info:
+  name: Team notes
+  type: folder
+  seq: 10
+request:
+  auth: inherit

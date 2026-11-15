@@ -50,7 +50,12 @@ variables:
   value: ''
   enabled: true
   secret: false
-  description: A text channel ID of the server (kudos channel)
+  description: A text channel ID of the server (kudos or team channel)
+- name: noteId
+  value: ''
+  enabled: true
+  secret: false
+  description: A team note's id, from Publish team note
 - name: week
   value: '2026-10-19'
   enabled: true
