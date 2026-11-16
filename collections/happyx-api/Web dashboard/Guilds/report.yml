@@ -16,4 +16,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'Same as the bot report, with the same anonymity rules (`withheld` days and reports, anonymous `messages` without `day` or `mood`); needs `view` access. Includes `participation` (surveys sent and answered on days with known `recipients`) and `kudos.top_receivers`.'
+docs: 'Same as the bot report, with the same anonymity rules (`withheld` days and reports, anonymous `messages` without author); needs `view` access. Includes `participation` (surveys sent and answered on days with known `recipients`) and `kudos.top_receivers`.'
