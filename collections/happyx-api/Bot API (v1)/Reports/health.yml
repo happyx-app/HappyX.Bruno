@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'For `/happyx status`: the same as the dashboard''s `/web/guilds/{guildID}/health`. `audience` (who would get the survey now), `opted_out`, `on_vacation`, and `last_survey` (`day`, `recipients`, `failed`, `closed_dms`; `null` if none in the last 14 days). 404 for an unknown server.'
+docs: 'For `/happyx status`: the same as the dashboard''s `/web/guilds/{guildID}/health`. `audience` (who would get the survey now), `opted_out`, `on_vacation`, and `last_survey` (`day`, `recipients`, `failed`, `closed_dms`; `null` if none in the last 14 days), and `team_channel` (`id`, `can_post`; `null` without a team or kudos channel). 404 for an unknown server.'
