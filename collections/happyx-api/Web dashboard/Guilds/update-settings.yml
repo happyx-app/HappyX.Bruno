@@ -55,6 +55,6 @@ docs: |-
 
   `canvas_enabled` turns the team canvas on or off (see Canvas); turning it off keeps the drawings.
 
-  `anonymous: false` names answers from the next day on (`named_since`). `anonymity_threshold`, 3 to 50 (default 3), is the fewest people whose anonymous answers a report shows beyond counts. `survey_message` can no longer use `{{user.streak}}` (a message saved with it keeps working).
+  `anonymous: false` names answers from the next day on (`named_since`). `anonymity_threshold`, 1 to 50 (default 3; below 3 an answer can point to whoever gave it, and members are told; lowering it counts from the next day), is the fewest people whose anonymous answers a report shows beyond counts. `survey_message` can no longer use `{{user.streak}}` (a message saved with it keeps working).
 
   `survey_enabled` starts or stops the daily survey and the game. A server the bot just joined has it `false` until the admin starts it.
