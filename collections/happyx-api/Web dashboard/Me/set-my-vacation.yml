@@ -19,4 +19,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'Sets the viewer''s own vacation, for every server, replacing the one they had. Dates `YYYY-MM-DD`, both included, at most 90 days. Requires `Content-Type: application/json` (415 otherwise).'
+docs: 'Sets the viewer''s own vacation, for every server, replacing the one they had (its days already gone stay, for streaks and «My evolution»). Dates `YYYY-MM-DD`, both included, at most 90 days. Requires `Content-Type: application/json` (415 otherwise).'
