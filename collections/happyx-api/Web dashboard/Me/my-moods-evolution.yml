@@ -16,4 +16,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'Own answers in every server. Default: last 30 days. Each server has `anonymous`: whether today''s answer is anonymous to the admin, and, once anonymity was turned off, `named_since`: the first day with names. `anonymity_threshold` is the fewest people whose anonymous answers a day needs before admins see more than how many answered.'
+docs: 'Own answers in every server. Default: last 30 days. Each server has `anonymous`: whether today''s answer is anonymous to the admin, and, once anonymity was turned off, `named_since`: the first day with names. `anonymity_threshold` is the fewest people whose anonymous answers a day needs before admins see more than how many answered. `survey_days` are the days the survey went out in that server since you joined it, and `vacations` your days off there that touch the period (`{from, to}`), past ones included: a survey day without an answer or a vacation is one you didn''t answer.'
