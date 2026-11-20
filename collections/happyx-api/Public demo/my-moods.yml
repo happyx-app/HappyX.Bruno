@@ -16,4 +16,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'The demo admin''s own answers, with each server''s `survey_days` and `vacations` like the real one. Default: last 30 days.'
+docs: 'The demo admin''s own answers, with each server''s `survey_days`, `vacations` and `events` like the real one. Default: last 30 days.'

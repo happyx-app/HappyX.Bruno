@@ -41,6 +41,11 @@ variables:
   enabled: true
   secret: false
   description: Another member's Discord user ID (kudos receiver)
+- name: eventId
+  value: ''
+  enabled: true
+  secret: false
+  description: ID of a team event marked on the server's chart (from «Get events»)
 - name: roleId
   value: ''
   enabled: true
