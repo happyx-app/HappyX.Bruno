@@ -1,0 +1,19 @@
+info:
+  name: Get events
+  type: http
+  seq: 14
+http:
+  method: GET
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/events?from={{from}}&to={{to}}'
+  params:
+  - name: from
+    value: '{{from}}'
+    type: query
+  - name: to
+    value: '{{to}}'
+    type: query
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: '`{events}`: the team events marked on the chart that touch the period, by start date, each `{id, from, to, title, description, color}` (`description` left out when empty). Default: last 30 days. Needs view.'

@@ -1,0 +1,25 @@
+info:
+  name: Update event
+  type: http
+  seq: 16
+http:
+  method: PUT
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/events/{{eventId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from": "2026-11-03",
+        "to": "2026-11-06",
+        "title": "Hackeo de la web",
+        "description": "",
+        "color": "orange"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Changes the event, with the same body as «Create event». 404 if it isn''t this server''s. Needs manage and `Content-Type: application/json`.'

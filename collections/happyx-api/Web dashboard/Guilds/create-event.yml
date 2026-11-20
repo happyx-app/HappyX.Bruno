@@ -1,0 +1,25 @@
+info:
+  name: Create event
+  type: http
+  seq: 15
+http:
+  method: POST
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/events'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from": "2026-11-03",
+        "to": "2026-11-05",
+        "title": "Hackeo de la web",
+        "description": "La web estuvo caída tres días.",
+        "color": "red"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Marks an event on the chart. `title` 1–60 characters, `description` optional (up to 280), `color` optional: `yellow` (default), `orange`, `red`, `green`, `blue` or `pink`. It can''t end after today in the server''s timezone; a server keeps up to 1000. 201 with the event. Needs manage and `Content-Type: application/json`.'
