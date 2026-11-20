@@ -16,6 +16,7 @@ http:
           {
             "discord_user_id": "{{userId}}",
             "username": "someone",
+            "display_name": "Someone",
             "role_ids": []
           }
         ]
@@ -24,4 +25,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: Registers up to 1000 members or refreshes usernames and roles, keeping opt-in state. 204.
+docs: 'Registers up to 1000 members or refreshes their names and roles, keeping opt-in state. `display_name` is the name the server shows (server nickname, else Discord display name, else username); empty keeps the stored one. 204.'
