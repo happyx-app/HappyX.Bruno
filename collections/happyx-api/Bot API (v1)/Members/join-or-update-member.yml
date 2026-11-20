@@ -13,6 +13,7 @@ http:
     data: |-
       {
         "username": "someone",
+        "display_name": "Someone",
         "active": true,
         "role_ids": []
       }
@@ -20,4 +21,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: '`active` and `role_ids` are optional: omitted keeps the stored value.'
+docs: '`display_name` is the name the server shows for the member (server nickname, else Discord display name, else username). `display_name`, `active` and `role_ids` are optional: omitted (or an empty `display_name`) keeps the stored value. Responses and everything that names a member return `display_name`: the name the server shows (their `username` until the bot reports one), with the username in brackets when another member of the server goes by the same name, e.g. `David (david.moreno)`.'
