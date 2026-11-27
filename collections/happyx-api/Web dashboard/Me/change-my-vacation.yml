@@ -1,0 +1,25 @@
+info:
+  name: Change my vacation
+  type: http
+  seq: 11
+http:
+  method: PUT
+  url: '{{webApiUrl}}/web/me/vacations/{{vacationId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from": "2026-12-22",
+        "to": "2027-01-06",
+        "everywhere": false,
+        "discord_guild_ids": ["{{guildId}}"],
+        "note": "¡Vacaciones!"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Changes one of the viewer''s own vacations, same body. Once it has started, `from` and the servers must stay as they are: only `to` and `note` change. Same 409s; 404 if it isn''t theirs.'

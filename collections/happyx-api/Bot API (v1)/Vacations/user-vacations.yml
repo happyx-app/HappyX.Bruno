@@ -1,0 +1,12 @@
+info:
+  name: User vacations
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{apiUrl}}/v1/users/{{userId}}/vacations'
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: '`/happyx vacation` without dates: the user''s vacations that haven''t ended, in the servers they are still in, by first day: `[{id, from, to, everywhere, guilds, note, set_by_admin, set_by_name}]`.'

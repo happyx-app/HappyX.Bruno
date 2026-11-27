@@ -1,0 +1,22 @@
+info:
+  name: Change member vacation
+  type: http
+  seq: 13
+http:
+  method: PUT
+  url: '{{webApiUrl}}/web/guilds/{{guildId}}/vacations/{{vacationId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from": "2026-12-22",
+        "to": "2027-01-08"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Changes a vacation set here (a started one only changes `to`); the bot tells the member again. 404 if it wasn''t set here. Needs manage and `Content-Type: application/json`.'

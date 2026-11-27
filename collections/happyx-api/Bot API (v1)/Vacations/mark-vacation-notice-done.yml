@@ -1,7 +1,7 @@
 info:
   name: Mark vacation notice done
   type: http
-  seq: 5
+  seq: 8
 http:
   method: DELETE
   url: '{{apiUrl}}/v1/vacation-notices/{{vacationNoticeId}}'

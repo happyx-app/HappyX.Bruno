@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: '`{own, set_by_admins}`: the viewer''s own vacation (`{from, to}`, `null` if none), which applies in every server, and the ones admins set for them (each with `discord_guild_id` and `guild_name`). Only those that haven''t ended.'
+docs: '`{vacations, guilds, max}`: the viewer''s vacations that haven''t ended, by first day (`id`, `from`, `to`, `everywhere`, `guilds` as `{discord_guild_id, name}`, `note`, `set_by_admin`, `set_by_name`, `created_at`), the servers they can pick and `max`, how many of their own they can have (10). Servers they left aren''t shown.'

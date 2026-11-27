@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'The vacations that apply to the member in the server and haven''t ended: `[{from, to, discord_guild_id, set_by_admin}]`. `discord_guild_id` is left out for their own, which applies in every server.'
+docs: 'The vacations that apply to the member in the server and haven''t ended, by first day: `[{id, from, to, everywhere, guilds, note, set_by_admin, set_by_name}]`.'

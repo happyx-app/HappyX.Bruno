@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'The demo has no vacations: `{own: null, set_by_admins: []}`.'
+docs: 'The demo has no vacations: `{vacations: [], guilds: [...], max: 10}`.'
