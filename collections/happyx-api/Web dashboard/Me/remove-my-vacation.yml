@@ -1,10 +1,10 @@
 info:
   name: Remove my vacation
   type: http
-  seq: 11
+  seq: 12
 http:
   method: DELETE
-  url: '{{webApiUrl}}/web/me/vacation'
+  url: '{{webApiUrl}}/web/me/vacations/{{vacationId}}'
   headers:
   - name: Content-Type
     value: application/json
@@ -12,4 +12,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: 'Removes the viewer''s own vacation; its days already gone stay, for streaks and «My evolution». 204; 404 if none. Requires `Content-Type: application/json`.'
+docs: 'Removes one of the viewer''s vacations, also one an admin set for them; its days already gone stay, for streaks and «My evolution». 204; 404 if it isn''t theirs. Requires `Content-Type: application/json`.'

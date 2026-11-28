@@ -1,0 +1,15 @@
+info:
+  name: Remove vacation
+  type: http
+  seq: 5
+http:
+  method: DELETE
+  url: '{{apiUrl}}/v1/users/{{userId}}/vacations/{{vacationId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Removes one of the user''s vacations, also one an admin set for them. 204; 404 if it isn''t theirs.'

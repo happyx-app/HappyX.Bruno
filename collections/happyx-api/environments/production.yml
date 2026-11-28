@@ -81,6 +81,11 @@ variables:
   enabled: true
   secret: false
   description: Language of the public demo, en or es
+- name: vacationId
+  value: ''
+  enabled: true
+  secret: false
+  description: id of a vacation, from My vacations or User vacations
 - name: vacationNoticeId
   value: ''
   enabled: true

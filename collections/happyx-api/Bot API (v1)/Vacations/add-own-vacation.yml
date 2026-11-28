@@ -1,0 +1,25 @@
+info:
+  name: Add own vacation
+  type: http
+  seq: 3
+http:
+  method: POST
+  url: '{{apiUrl}}/v1/users/{{userId}}/vacations'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from": "2026-12-22",
+        "to": "2027-01-06",
+        "everywhere": false,
+        "discord_guild_ids": ["{{guildId}}"],
+        "note": "¡Vacaciones!"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: '`/happyx vacation`: adds one of the user''s own, same rules as the web. 201 with it; 409 with `overlaps` or `max`.'

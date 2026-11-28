@@ -1,0 +1,25 @@
+info:
+  name: Add my vacation
+  type: http
+  seq: 10
+http:
+  method: POST
+  url: '{{webApiUrl}}/web/me/vacations'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from": "2026-12-22",
+        "to": "2027-01-06",
+        "everywhere": false,
+        "discord_guild_ids": ["{{guildId}}"],
+        "note": "¡Vacaciones!"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Adds one of the viewer''s own vacations: in every server (`"everywhere": true`, also ones joined later) or in `discord_guild_ids`. Dates `YYYY-MM-DD`, both included, at most 90 days, starting at most a year ahead. `note` optional, up to 80 characters, one line; only the admins of those servers see it. 201 with it; 409 with `overlaps` (the one it shares a day and a server with) or `max`. Requires `Content-Type: application/json`.'

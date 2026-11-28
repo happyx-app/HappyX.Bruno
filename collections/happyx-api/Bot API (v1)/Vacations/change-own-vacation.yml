@@ -1,0 +1,25 @@
+info:
+  name: Change own vacation
+  type: http
+  seq: 4
+http:
+  method: PUT
+  url: '{{apiUrl}}/v1/users/{{userId}}/vacations/{{vacationId}}'
+  headers:
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "from": "2026-12-22",
+        "to": "2027-01-06",
+        "everywhere": false,
+        "discord_guild_ids": ["{{guildId}}"],
+        "note": "¡Vacaciones!"
+      }
+  auth: inherit
+settings:
+  encodeUrl: true
+  followRedirects: true
+docs: 'Changes one of the user''s own (a started one only changes `to` and `note`). 404 if it isn''t theirs.'

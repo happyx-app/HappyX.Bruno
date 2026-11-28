@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: '`{vacations, members}`: vacations of members still in the server that haven''t ended (`discord_user_id`, `username`, `display_name`, `from`, `to`, `set_here`: `false` for the member''s own, which admins can''t change), and the members who can be given one (`discord_user_id`, `username`, `display_name`). Needs manage.'
+docs: '`{vacations, members}`: the vacations that apply in this server, of members still in it, that haven''t ended, by first day (`id`, `discord_user_id`, `username`, `display_name`, `from`, `to`, `note`: the member''s own note, `set_here`: set by an admin here, so admins can change it, `set_by_you`, `set_by_name`), and the members who can be given one. Other servers aren''t shown. Needs manage.'

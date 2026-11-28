@@ -1,7 +1,7 @@
 info:
   name: Delete event
   type: http
-  seq: 17
+  seq: 18
 http:
   method: DELETE
   url: '{{webApiUrl}}/web/guilds/{{guildId}}/events/{{eventId}}'

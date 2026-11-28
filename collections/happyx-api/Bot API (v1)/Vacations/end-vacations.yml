@@ -1,7 +1,7 @@
 info:
   name: End vacations
   type: http
-  seq: 3
+  seq: 6
 http:
   method: DELETE
   url: '{{apiUrl}}/v1/guilds/{{guildId}}/members/{{userId}}/vacations'
@@ -9,4 +9,4 @@ http:
 settings:
   encodeUrl: true
   followRedirects: true
-docs: '`/happyx resume`: the member is back. Their vacations that cover today in this server (their own, in every server, and the one an admin set for them here) end yesterday, so today''s survey reaches them; one starting today is removed. Once today''s survey has gone out it no longer reaches them, so they end today instead (one starting today stays as that single day). The days already gone stay vacation, and vacations planned for later stay. 200 with the ones it ended, as they were: `[{from, to, discord_guild_id, set_by_admin}]`, empty when there were none.'
+docs: '`/happyx resume`: the member is back. Their vacations that cover today in this server (their own, in all their servers if it applies in several, and the ones admins set for them here) end yesterday, so today''s survey reaches them; one starting today is removed. Once today''s survey has gone out it no longer reaches them, so they end today instead (one starting today stays as that single day). The days already gone stay vacation, and vacations planned for later stay. 200 with the ones it ended, as they were (as in Member vacations), empty when there were none.'
